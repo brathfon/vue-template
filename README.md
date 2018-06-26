@@ -1,0 +1,1 @@
+This is a starting point for common Vue projects and included authorization and a sample db and page to display the data.

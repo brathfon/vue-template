@@ -1,0 +1,118 @@
+.turbidity-calibration-range {font-weight: bold;}
+
+
+.in-situ-header-cell { text-align: center; padding-left: 10px; padding-right: 10px }
+
+.in-situ-table-cell { text-align: center }
+
+.center-align-table-cell { text-align: center }
+
+.in-situ-inner-table { margin: auto }
+
+.in-situ-location-table {
+  margin: auto;
+  text-align:left;
+  margin-left:5px
+}
+
+.user-notes-section {
+  padding-top: 10px;
+}
+
+.location-cell {
+  width: 12%;
+}
+
+.date-input {
+  width: 10%;
+}
+
+.even-table-row {
+    background-color: #F9F9F9;
+  }
+
+.wq-container {
+  padding-top: 15px;
+}
+
+.wq-edit-choices {
+  padding-top: 15px;
+}
+
+.wq-input {
+
+  text-align: center;
+  display: block;
+width: 100%;
+height: 34px;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.42857143;
+color: #555;
+background-color: #fff;
+background-image: none;
+border: 1px solid #ccc;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.table-with-border { border: 1px solid black }
+
+.login-container {
+    padding: 25px;
+    position: fixed;
+}
+
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+
+
+.login-header {
+ border:0 solid #fff;
+ border-bottom-width:1px;
+ padding-bottom:10px;
+ text-align: center;
+}
+
+.login-wrapper {
+    text-align: center;
+}
+
+.orig-validation-error {
+    border-color: #cfdc00;
+    box-shadow: 0 0 5px rgba(207, 220, 0, 0.4);
+}
+
+.validation-error {
+    background-color: rgb(242, 222, 222);
+    border-color: #cc0000;
+    box-shadow: 0 0 5px rgba(242, 222, 222, 0.9);
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
