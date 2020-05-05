@@ -42,7 +42,7 @@
     "moment": "^2.17.1",
     "moment-timezone": "^0.5.11",
     "node-sass": "^4.8.3",
-    "open": "0.0.5",
+    "open": "6.0.0",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "uglify-js": "^3.0.28",
