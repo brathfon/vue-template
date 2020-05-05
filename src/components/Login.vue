@@ -14,7 +14,7 @@
           <div class="form-login">
               <h4 class="login-header">Welcome Back</h4>
               <input v-model="email" type="text" name="email" placeholder="email" class="form-control input-sm chat-input"><br>
-              <input v-model="password" type="text" name="password" placeholder="password" class="form-control input-sm chat-input"><br>
+              <input v-model="password" type="password" name="password" placeholder="password" class="form-control input-sm chat-input"><br>
               <div class="login-wrapper">
                 <span class="group-btn">
                   <button type="submit" class="btn btn-primary btn-md" v-on:click="loginInfoSubmitted">
