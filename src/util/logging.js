@@ -31,6 +31,10 @@ var sendLogMessage = function(error) {
       }
     }
   }
+  else {
+    console.error("ERROR: can not log without a user logged in. Need JWT");
+    return;
+  }
   // need to turn the objects into JSON string for storage in the db.
   // The error.text is an array of strings, and can be empty
   jsonText = JSON.stringify(error.text);

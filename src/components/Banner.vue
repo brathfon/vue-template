@@ -35,6 +35,8 @@
     methods: {
       logout: function() {
         this.$store.dispatch('auth/resetAuth');
+        // unset the token to axios to make sure no unauthorized things happen
+        this.$http.defaults.headers.common['Authorization'] = '';
         this.$router.push('/#');  // redirect to the landing page
       }
     }

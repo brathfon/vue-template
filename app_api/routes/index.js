@@ -43,7 +43,7 @@ router.get('/getMeasurementPrecision', lookup.getMeasurementPrecision);
 
 
 // logging
-router.post('/insertLogMessage', logging.insertLogMessage);
+router.post('/insertLogMessage', auth, logging.insertLogMessage);
 
 
 

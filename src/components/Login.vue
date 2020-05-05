@@ -13,7 +13,7 @@
         <div class="col-md-offset-4 col-md-4">
           <div class="form-login">
               <h4 class="login-header">Welcome Back</h4>
-              <input v-model="email" type="text" name="email" placeholder="email" class="form-control input-sm chat-input"><br>
+              <input v-model="email" type="text" name="email" placeholder="login" class="form-control input-sm chat-input"><br>
               <input v-model="password" type="password" name="password" placeholder="password" class="form-control input-sm chat-input"><br>
               <div class="login-wrapper">
                 <span class="group-btn">
@@ -63,11 +63,11 @@
         if ( ((this.email === "")    || (this.email === null)) &&
              ((this.password === "") || (this.password === null)) )
         {
-          this.loginErrors.push(this.createSimpleErrorMsg("You must enter your email and password", "danger"));
+          this.loginErrors.push(this.createSimpleErrorMsg("You must enter your login and password", "danger"));
           return false;
         }
         else if ((this.email === "") || (this.email === null)) {
-          this.loginErrors.push(this.createSimpleErrorMsg("You must enter your email", "danger"));
+          this.loginErrors.push(this.createSimpleErrorMsg("You must enter your login", "danger"));
           return false;
         }
         else if ((this.password === "") || (this.password === null)) {
@@ -85,8 +85,8 @@
         if (!this.loginSuccessful && (this.loginErrors.length === 0)) {
           if (this.token === "NO_MATCHING_EMAIL_FOUND") {
             this.loginErrors = [];
-            this.loginErrors.push(this.createSimpleErrorMsg("Your email, " + this.email + ", was not found.", "danger"));
-            logging.sendSimpleLogMessage.call(this, "Login attempt with unknown email " + this.email, "warning");
+            this.loginErrors.push(this.createSimpleErrorMsg("Your login, " + this.email + ", was not found.", "danger"));
+            logging.sendSimpleLogMessage.call(this, "Login attempt with unknown login " + this.email, "warning");
           }
           else if (this.token === "PASSWORD_DOES_NOT_MATCH") {
             this.loginErrors = [];
@@ -133,6 +133,10 @@
             this.createUserFriendlyMessage();
             this.password = "";
             if (response.data.loginSuccessful && this.token) {   // the login was successful
+
+              // set the token to axios to let it make authorized calls
+              this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + this.token;
+
               let payload = JSON.parse(atob(this.token.split('.')[1]));
               this.$store.commit('auth/updateUserID',  payload.userID);
               this.$store.commit('auth/updateFirstName', payload.firstName);
